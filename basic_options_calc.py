@@ -22,4 +22,4 @@ percent_profit = decimal.Decimal ((profit / amount) * 100)
 
 print(f"You have ${buying_power_left} left in your buying power")
 print()
-print(f"Your profit is ${profit} and your percent profit is {percent_profit}")
+print(f"Your profit is ${profit} and your percent profit is {percent_profit}%")
