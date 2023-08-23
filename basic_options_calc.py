@@ -11,7 +11,7 @@ if amount > buying_power:
 entry_point = decimal.Decimal(input("Enter the premium price you entered: "))
 contracts_bought = int((amount / entry_point) / 100)
 print(f"You bought {contracts_bought} contracts")
-
+print()
 
 exit_point = decimal.Decimal(input("Enter the price you sold: "))
 
