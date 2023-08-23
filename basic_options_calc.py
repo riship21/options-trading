@@ -24,6 +24,6 @@ print(f"You have ${buying_power_left} left in your buying power")
 print()
 print(
     f"Your profit is ${profit} and your percent profit is {percent_profit}% \n")
-print("no more spy 0dte for me")
+print("no more spy 0dte for me !")
 print("testing merge conflicts")
 print()
