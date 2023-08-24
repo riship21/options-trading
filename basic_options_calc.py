@@ -2,13 +2,14 @@ import decimal
 from colorama import init, Fore,  Style
 
 print()
-print(Fore.BLUE + "Welcome to the options trading calculator!\n" + Style.RESET_ALL) 
-#print( "Welcome to the options trading calculator!" + "\n")
+print(Fore.BLUE + "Welcome to the options trading calculator!\n" + Style.RESET_ALL)
+# print( "Welcome to the options trading calculator!" + "\n")
 print("=============================================================" + "\n")
 
 buying_power = decimal.Decimal(input("Enter your buying power: "))
 
-entry_point = decimal.Decimal(input("Enter the premium price you want to buy: "))
+entry_point = decimal.Decimal(
+    input("Enter the premium price you want to buy: "))
 
 print()
 
@@ -35,7 +36,7 @@ if decision.lower() == "y" or decision.lower() == "Yes":
     if contracts > max_contracts:
         print("You do not have enough buying power to buy that many contracts" + "\n")
         contracts = int(input("How many more contracts do you want to buy?: "))
-    
+
     print(f"You bought {contracts} contracts" + "\n")
     amount_invested = decimal.Decimal(contracts * entry_point * 100)
     print(f"You invested ${amount_invested}" + "\n")
@@ -44,7 +45,8 @@ if decision.lower() == "y" or decision.lower() == "Yes":
     exit_point = decimal.Decimal(input("Enter the price you sold: "))
     profit = decimal.Decimal((exit_point - entry_point) * contracts * 100)
     percent_profit = round(((profit / amount_invested) * 100), 2)
-    print(f"Your profit is ${profit} and your percent profit is {percent_profit}% \n")
+    print(
+        f"Your profit is ${profit} and your percent profit is {percent_profit}% \n")
     buying_power = buying_power + profit
     print(f"Your buying power is now ${buying_power}" + "\n")
     print("=============================================================" + "\n")
